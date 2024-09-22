@@ -139,6 +139,10 @@ This service can be called to remove a chore date (e.g. skip a chore). This remo
 
 This service can be called to update the state of a chore. This is mainly useful for custom chores that don't automatically update themselves.
 
+| Service Data Attribute | Type     | Description                                                                |
+| :--------------------- | :------- | :------------------------------------------------------------------------- |
+| `entity_id`            | Required | The entity ID of the chore or chores to update their state and attributes. |
+
 ## Contributions are welcome!
 
 If you want to contribute to this please read the [Contribution guidelines](CONTRIBUTING.md)
