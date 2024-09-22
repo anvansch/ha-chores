@@ -20,7 +20,7 @@ know how it could be improved!
 **This component will set up the following platforms.**
 
 | Platform   | Description                           |
-| ---------- | ------------------------------------- |
+| :--------- | :------------------------------------ |
 | `sensor`   | Contains the state for a single chore |
 | `calendar` | A Chore calendar for easy tracking    |
 
@@ -103,7 +103,7 @@ The other attributes are the next due date, the last completed date, whether the
 This service can be called to mark a chore as completed. It will automatically schedule the next due date for the chore, and adjust future due dates if necessary (e.g. when scheduling "after" chores).
 
 | Service Data Attribute | Type     | Description                                                                             |
-| ---------------------- | -------- | --------------------------------------------------------------------------------------- |
+| :--------------------- | :------- | :-------------------------------------------------------------------------------------- |
 | `entity_id`            | Required | The entity ID of the chore or chores to complete.                                       |
 | `last_completed`       | Optional | The date the chore was last completed. If not specified, the current date will be used. |
 
@@ -112,7 +112,7 @@ This service can be called to mark a chore as completed. It will automatically s
 This service can be called to add a due date to a chore manually. This is useful for custom chores that don't have any due dates scheduled automatically.
 
 | Service Data Attribute | Type     | Description                                                |
-| ---------------------- | -------- | ---------------------------------------------------------- |
+| :--------------------- | :------- | :--------------------------------------------------------- |
 | `entity_id`            | Required | The entity ID of the chore or chores to add a due date to. |
 | `date`                 | Required | The date the chore is due.                                 |
 
@@ -121,7 +121,7 @@ This service can be called to add a due date to a chore manually. This is useful
 This service can be called to offset the next due date of a chore. This will only affect the next due date for "every" chores, but will affect all future due dates for "after" chores since they are fluid and based on the previous date.
 
 | Service Data Attribute | Type     | Description                                                                     |
-| ---------------------- | -------- | ------------------------------------------------------------------------------- |
+| :--------------------- | :------- | :------------------------------------------------------------------------------ |
 | `entity_id`            | Required | The entity ID of the chore or chores to offset the due date of.                 |
 | `offset`               | Required | The number of days to offset the due date by. This can be positive or negative. |
 | `date`                 | Optional | The date of the chore to offset, or the next due date if blank.                 |
@@ -131,7 +131,7 @@ This service can be called to offset the next due date of a chore. This will onl
 This service can be called to remove a chore date (e.g. skip a chore). This removes the next due date if no date is passed. If a date is passed, it will remove the due date that matches the date passed. Even if no due date currently matches, the removal will persist so that if a due date is added that matches the date passed, it will be removed as well.
 
 | Service Data Attribute | Type     | Description                                                     |
-| ---------------------- | -------- | --------------------------------------------------------------- |
+| :--------------------- | :------- | :-------------------------------------------------------------- |
 | `entity_id`            | Required | The entity ID of the chore or chores to add a due date to.      |
 | `date`                 | Optional | The date of the chore to remove, or the next due date if blank. |
 
